@@ -1467,7 +1467,7 @@ only screen and (max-width: 767px) {
 
 .section-space--inner--120 {
     padding-top: 120px;
-    padding-bottom: 10px;
+    padding-bottom: 50px;
 }
 
 .section-space--inner--100{
@@ -1587,9 +1587,12 @@ only screen and (max-width: 767px) {
     padding-bottom: 10px;
 }
 
+
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .section-space--inner--bottom--120 {
         padding-bottom: 80px;
+        
     }
 }
 

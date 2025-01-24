@@ -1600,6 +1600,9 @@ only screen and (max-width: 767px) {
     padding-bottom: 120px;
 }
 
+
+
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .section-space--inner--bottom--120 {
         padding-bottom: 80px;
