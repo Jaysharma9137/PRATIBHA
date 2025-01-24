@@ -1484,8 +1484,8 @@ only screen and (max-width: 767px) {
 }
 
 .section-space--inner--120 {
-    padding-top: 120px;
-    padding-bottom: 50px;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -13137,6 +13137,7 @@ only screen and (max-width: 767px) {
     background-position: center bottom;
     min-height: 300px;
     height: 100%;
+    
 }
 
 .feature-background__image--style2 {
