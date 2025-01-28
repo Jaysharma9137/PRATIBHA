@@ -1744,4 +1744,42 @@
         });
     });
 
+    document.addEventListener("DOMContentLoaded", function() {
+        const counters = document.querySelectorAll('.counterss');
+    
+        // Function to update the counter
+        const updateCount = (counter) => {
+            const target = +counter.getAttribute('data-target');
+            let count = 0; // Start from 0
+    
+            const increment = target / 200; // Adjust this for speed
+    
+            const countInterval = setInterval(() => {
+                if (count < target) {
+                    count += increment;
+                    counter.innerText = Math.ceil(count);
+                } else {
+                    counter.innerText = target;
+                    clearInterval(countInterval); // Stop the interval when the target is reached
+                }
+            }, 5); // Adjust this for speed
+        };
+    
+        // Set up IntersectionObserver to trigger the counter when it's in view
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    updateCount(entry.target); // Start the count when element is in view
+                    observer.unobserve(entry.target); // Stop observing once the counter starts
+                }
+            });
+        }, { threshold: 0.5 }); // Trigger when 50% of the element is in view
+    
+        // Observe all counters
+        counters.forEach(counter => {
+            observer.observe(counter);
+        });
+    });
+    
+
 
