@@ -4928,6 +4928,7 @@ only screen and (max-width: 767px) {
 
 .footer-logo {
     margin-bottom: 35px;
+    width: 200px;
 }
 
 .footer-logo--style2 {
